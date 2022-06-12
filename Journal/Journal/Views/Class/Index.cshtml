@@ -1,0 +1,46 @@
+﻿@model Journal.ViewModels.ClassIndexViewModel
+@{
+    ViewData["Title"] = "Список классов";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Список классов</h1>
+
+<div class="conrainer p-3 "> 
+    <div class="row pt-4">
+        <div class=" col-6">
+        <a class="btn btn-primary" asp-controller="Class" asp-action="Create"> 
+            <i class="bi bi-plus-circle"></i> &nbsp; Создать новый класс
+        </a>
+        </div>
+        <div class=" col-6 text-end">
+        </div>
+    </div>
+    &nbsp;
+<table class="table table-bordered table-striped" style="width: 100%">
+    <thead>
+        <tr>
+            <th> 
+                Класс
+            </th>
+            <th> 
+                Учитель
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model.Classes)
+        {
+            <tr>
+                <td width="50%"> 
+                    @obj.Number"@obj.Letter"
+                </td>
+                <td width="30">
+                    @obj.Teacher.LastName @obj.Teacher.Name @obj.Teacher.SurName
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-controller="Role" asp-action="Admin" class="w-100 btn btn-secondary btn-lg">Назад к администрированию</a>
+</div>

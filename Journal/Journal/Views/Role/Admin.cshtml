@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Страница Администратора";
+}
+<div class="text-center">
+    <h1 class="display-4">Панель Администрирования</h1>
+</div>
+ <div class="col-12 ">
+ <a class="w-100 btn-lg btn btn-primary"  asp-controller="Class" asp-action="Index">
+ Список классов
+</a>
+</div>
+&nbsp;
+<div class="col-12 ">
+     <a class="w-100 btn-lg btn btn-primary"  asp-controller="Teachers" asp-action="Index" >
+ Список учителей
+</a>
+</div>
+&nbsp;
+<a class="w-100 btn-lg btn btn-primary"  asp-controller="Parent" asp-action="Index" >
+ Список родителей
+</a>
